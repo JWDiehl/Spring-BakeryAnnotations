@@ -1,9 +1,16 @@
 package com.zipcodewilmington.bakery.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class Muffin {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //helps increment - everytime you add an ID you add a new one - 1,2,3,4...
     private Long id;
 
     private String flavor;
